@@ -42,7 +42,7 @@ insert_card → enter_pin → select_account → see_balance / deposit / withdra
 
 ```bash
 # Clone the repo
-git clone <your-repo-url>
+git clone https://github.com/jih0-kim/atm_controller.git
 cd atm-project
 
 # Install dependencies
