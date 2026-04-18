@@ -66,6 +66,9 @@ class ATMController:
         self._require_account()
         self._check_positive_amount(amount)
 
+        if self.cash_bin.available_cash() < amount:
+            raise RuntimeError("ATM doesn't have enough cash.")
+
         new_balance = self.bank.withdraw(self._selected_account, amount)
         self.cash_bin.dispense(amount)
         return new_balance
